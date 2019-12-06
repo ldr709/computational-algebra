@@ -3,6 +3,11 @@
 {-# LANGUAGE MultiParamTypeClasses, PatternSynonyms, PolyKinds, RankNTypes #-}
 {-# LANGUAGE ScopedTypeVariables, TypeFamilies, TypeOperators              #-}
 {-# OPTIONS_GHC -Wincomplete-patterns -Wno-orphans #-}
+
+#if defined(__GLASGOW_HASKELL__) && __GLASGOW_HASKELL__ >= 806
+{-# LANGUAGE NoStarIsType #-}
+#endif
+
 module Algebra.Internal
        (  (:~:)(..), withRefl,
           module Data.Proxy,
