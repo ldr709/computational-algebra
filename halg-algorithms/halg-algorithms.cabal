@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f197b3214b533a9eec722a61f8284444269d9ecf6061561930927950ad4330d3
+
+name:           halg-algorithms
+version:        0.6.0.0
+synopsis:       Algorithms related to Gröbner basis, part of halg computational algebra suite.
+description:    Please see the project Web Site <https://konn.github.io/computational-algebra>
+category:       Math
+homepage:       https://github.com/konn/halg-groebner#readme
+bug-reports:    https://github.com/konn/halg-groebner/issues
+author:         Hiromi ISHII
+maintainer:     konn.jinro _at_ gmail.com
+copyright:      2018 (c) Hiromi ISHII
+license:        BSD3
+license-file:   LICENSE
+tested-with:    GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.3
+
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/konn/halg-groebner
+
+library
+  exposed-modules:
+      Algebra.Algorithms.Groebner.F4
+      Algebra.Algorithms.Groebner.Homogeneous
+      Algebra.Algorithms.Groebner.Signature
+      Algebra.Algorithms.Groebner.Signature.Rules
+      Algebra.Algorithms.ZeroDim
+      Algebra.Field.RationalFunction
+      Algebra.Ring.Polynomial.Homogenised
+      Control.Monad.ST.Combinators
+  other-modules:
+      Algebra.Algorithms.FGLM
+  hs-source-dirs:
+      src
+  default-extensions: CPP DataKinds FlexibleContexts FlexibleInstances GADTs MultiParamTypeClasses OverloadedLabels PolyKinds TypeFamilies TypeInType UndecidableInstances NoImplicitPrelude
+  ghc-options: -Wall -O2
+  build-depends:
+      MonadRandom
+    , algebra
+    , algebraic-prelude
+    , base >=4.7 && <5
+    , containers
+    , control-monad-loop
+    , convertible
+    , dlist
+    , equational-reasoning
+    , foldl
+    , ghc-typelits-knownnat
+    , halg-core
+    , halg-heaps
+    , halg-matrices
+    , halg-polynomials
+    , heaps
+    , hmatrix
+    , lens
+    , matrix
+    , monad-loops
+    , mono-traversable
+    , mtl
+    , parallel
+    , reflection
+    , semigroups
+    , sized
+    , vector
+  default-language: Haskell2010

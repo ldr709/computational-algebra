@@ -1,8 +1,10 @@
--- This file has been generated from package.yaml by hpack version 0.28.2.
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 39521c962942d771b7ff402626e04dfad525e4c6603fee759d4980ff67c18818
+-- hash: 84ebe1ee75cbe38fd2284dd56aeda42de487d850f526ad35b53b8a4ce02afd44
 
 name:           algebraic-prelude
 version:        0.1.1.0
@@ -18,7 +20,6 @@ copyright:      2015 (c) Hiromi ISHII
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
-cabal-version:  >= 1.10
 
 source-repository head
   type: git
@@ -44,18 +45,4 @@ library
   else
     build-depends:
         algebra >=4.3
-  default-language: Haskell2010
-
-executable sandpit
-  main-is: sandpit.hs
-  other-modules:
-      Paths_algebraic_prelude
-  hs-source-dirs:
-      examples
-  default-extensions: NoImplicitPrelude
-  ghc-options: -Wall
-  build-depends:
-      algebraic-prelude
-    , base
-  buildable: False
   default-language: Haskell2010
